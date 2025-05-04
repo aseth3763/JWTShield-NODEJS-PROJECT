@@ -1,10 +1,7 @@
 const mongoose = require("mongoose") ;
 const mongoURL = "mongodb://localhost:27017/CRUD"
 
-mongoose.connect(mongoURL,{
-    useNewUrlParser : true,
-    useUnifiedTopology : true
-})
+mongoose.connect(mongoURL)
 
 const db =mongoose.connection 
 
@@ -20,4 +17,4 @@ db.on("disconnected",()=>{
     console.log("Disconnected")
 })
 
-module.exports = db;
+module.exports = db
